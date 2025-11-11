@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Social Media Icons</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      list-style: none;
+      margin: 0 40px;
+    }
+
+    ul li a .fa {
+      font-size: 40px;
+      color: #262626;
+      line-height: 80px;
+      transition: .5s;
+      padding-right: 14px;
+    }
+
+    ul li a {
+      display: block;
+      width: 70px;
+      height: 80px;
+      background: #cecaca;
+      text-align: center;
+      padding-left: 20px;
+      transform: rotate(318deg) skew(199deg) translate(0, 0);
+      transition: .5s;
+      box-shadow: -20px 20px 10px rgba(0, 0, 0, .5);
+      position: relative;
+    }
+
+    ul li a:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -20px;
+      height: 100%;
+      width: 20px;
+      background: #8a6f6f;
+      transform: rotate(0deg) skewY(-45deg);
+    }
+
+    ul li a:after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: -10px;
+      height: 20px;
+      width: 100%;
+      background: #8a6f6f;
+      transform: rotate(0deg) skewX(-45deg);
+    }
+
+    ul li a:hover {
+      transform: skew(5deg) translate(20px, -50px);
+      box-shadow: -50px 50px 50px rgba(0, 0, 0, .5);
+    }
+
+    ul li:hover .fa {
+      color: #fff;
+    }
+
+    /* YouTube */
+    ul li:hover:nth-child(1) a {
+      background: #FF0000;
+    }
+
+    ul li:hover:nth-child(1) a:before {
+      background: #CC0000;
+    }
+
+    ul li:hover:nth-child(1) a:after {
+      background: #FF3333;
+    }
+
+    /* WhatsApp */
+    ul li:hover:nth-child(2) a {
+      background: #25D366;
+    }
+
+    ul li:hover:nth-child(2) a:before {
+      background: #1DA851;
+    }
+
+    ul li:hover:nth-child(2) a:after {
+      background: #5FFB8F;
+    }
+
+    /* Instagram */
+    ul li:hover:nth-child(3) a {
+      background: #E4405F;
+    }
+
+    ul li:hover:nth-child(3) a:before {
+      background: #D81C3F;
+    }
+
+    ul li:hover:nth-child(3) a:after {
+      background: #E46880;
+    }
+
+    /* Facebook */
+    ul li:hover:nth-child(4) a {
+      background: #3b5998;
+    }
+
+    ul li:hover:nth-child(4) a:before {
+      background: #365492;
+    }
+
+    ul li:hover:nth-child(4) a:after {
+      background: #4a69ad;
+    }
+
+    /* Tooltip styling */
+    .tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      font-size: 14px;
+      padding: 5px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .clicked {
+      transform: scale(0.9) rotate(318deg) skew(199deg);
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <a href="#">
+        <i class="fa fa-youtube"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+  </ul>
+
+  <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
